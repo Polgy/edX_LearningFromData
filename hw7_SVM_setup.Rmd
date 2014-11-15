@@ -1,0 +1,21 @@
+---
+title: "hw7SVM"
+author: "Sergey Polgul"
+date: "Friday, November 14, 2014"
+output: html_document
+---
+
+
+```{r genData}
+source('lib/PLA.R')
+source('lib/genDat.R')
+
+REPS=1e5
+
+DAT = genDat(10, T)
+sum(DAT[[1]]$y==1)
+
+p1 = PLA(DAT[[1]][,1:2], DAT[[1]]$y)
+p1
+
+```
